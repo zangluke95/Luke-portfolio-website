@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
               <h3 className="font-medium text-portfolio-navy mb-3">Connect on</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.linkedin.com/in/jankiben-parmar" 
+                  href="https://www.linkedin.com/in/janki-parmar-b1466b176/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-portfolio-blue text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -67,7 +67,7 @@ const ContactSection: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://github.com/jankiben-parmar" 
+                  href="https://github.com/76jankihere" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-portfolio-blue text-white p-2 rounded-full hover:bg-blue-700 transition-colors"

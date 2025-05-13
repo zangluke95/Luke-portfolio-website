@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
             )}
             <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">{title}</h3>
           </div>
-          <span className="time-period mt-2 md:mt-0 text-sm px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-medium border border-blue-100 group-hover:bg-blue-100 transition-colors">
+          <span className="time-period mt-2 md:mt-0 text-sm px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-medium border border-blue-100 group-hover:bg-blue-100 transition-colors whitespace-nowrap">
             {period}
           </span>
         </div>
@@ -123,7 +123,7 @@ const ProjectsSection: React.FC = () => {
         "Integrated chatbot using NLTK, spaCy, and Transformers for NLP-based interactions"
       ],
       technologies: ["Python", "Poetry", "Docker", "ngrok", "Streamlit", "REST API", "Transformer Models", "Pillow python library", "Ultralytics Yolo v11", "Material for Mkdocs", "MongoDB DB", "CICD pipelines"],
-      link: "#",
+      link: "https://rarnold97.github.io/ezshopping_site/",
       featured: true,
       icon: "star"
     },
@@ -135,7 +135,7 @@ const ProjectsSection: React.FC = () => {
         "Deployed object detection models on TPU, improving runtime by 30%"
       ],
       technologies: ["AR", "TensorFlow Lite", "Scene Capturing", "AI Object Detection", "Real-time 3D", "TPU"],
-      link: "#",
+      link: "https://github.com/76jankihere/Distributed-Computing---Xperi",
       icon: "trending-up"
     },
     {
@@ -146,7 +146,7 @@ const ProjectsSection: React.FC = () => {
         "Enabled secure user flows and modular backend architecture"
       ],
       technologies: ["E-commerce", "Vue.js", "REST APIs", "Authentication", "API Gateway", "JWT", "OAuth2.0", "Microservices"],
-      link: "#",
+      link: "https://drive.google.com/file/d/1m4jsTjNNUlnjfpo9iaQTPIgQjaMmbYFO/view?usp=sharing",
       featured: true,
       icon: "code"
     },
@@ -158,7 +158,7 @@ const ProjectsSection: React.FC = () => {
         "Automated irrigation logic cut water usage by 30%"
       ],
       technologies: ["IoT", "Arduino", "Python", "MongoDB", "Data Analytics", "Automation", "Raspberry Pi", "Sensors", "WebSockets"],
-      link: "#",
+      link: "https://drive.google.com/drive/folders/1AxZGV8P-rkRd7rBByjfUy-RPucBwtmzd?usp=sharing",
       icon: "trending-up"
     },
     {
@@ -169,7 +169,7 @@ const ProjectsSection: React.FC = () => {
         "Reduced system latency by 20% using event-driven cloud architecture"
       ],
       technologies: ["Cloud", "AWS S3", "Lambda", "Automation", "RBAC", "Event-driven architecture", "DynamoDB", "API Gateway", "CloudFront"],
-      link: "#",
+      link: "https://drive.google.com/drive/folders/1AxZGV8P-rkRd7rBByjfUy-RPucBwtmzd?usp=sharing",
       icon: "award"
     },
     {
