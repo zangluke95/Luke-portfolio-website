@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { LinkIcon } from 'lucide-react';
+import { LinkIcon, ExternalLink } from 'lucide-react';
 
 interface ProjectProps {
   title: string;
@@ -11,6 +11,7 @@ interface ProjectProps {
   technologies: string[];
   period: string;
   link?: string;
+  featured?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({ 
@@ -18,10 +19,16 @@ const ProjectCard: React.FC<ProjectProps> = ({
   description, 
   technologies, 
   period,
-  link 
+  link,
+  featured = false
 }) => {
   return (
-    <Card className="border-none shadow-md hover:shadow-lg transition-all h-full flex flex-col">
+    <Card className={`border-none ${featured ? 'shadow-xl ring-2 ring-blue-200' : 'shadow-md'} hover:shadow-lg transition-all h-full flex flex-col transform hover:-translate-y-1 duration-300 overflow-hidden`}>
+      {featured && (
+        <div className="bg-portfolio-blue text-white text-xs font-bold py-1 text-center">
+          FEATURED PROJECT
+        </div>
+      )}
       <CardContent className="p-6 flex-grow">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
           <h3 className="text-xl font-bold text-portfolio-navy">{title}</h3>
@@ -38,7 +45,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         
         <div className="flex flex-wrap gap-2 mt-4">
           {technologies.map((tech, index) => (
-            <Badge key={index} variant="outline" className="bg-blue-50 text-portfolio-gray border-none">
+            <Badge key={index} variant="outline" className="bg-blue-50 text-portfolio-gray border-none transition-colors hover:bg-blue-100">
               {tech}
             </Badge>
           ))}
@@ -47,9 +54,9 @@ const ProjectCard: React.FC<ProjectProps> = ({
       
       {link && (
         <CardFooter className="px-6 pb-6 pt-0">
-          <Button variant="outline" className="w-full" asChild>
+          <Button variant="outline" className="w-full bg-white hover:bg-blue-50 border-portfolio-blue text-portfolio-blue" asChild>
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <LinkIcon className="mr-2 h-4 w-4" />View Project
+              <ExternalLink className="mr-2 h-4 w-4" />View Project
             </a>
           </Button>
         </CardFooter>
@@ -59,6 +66,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
 };
 
 const ProjectsSection: React.FC = () => {
+  const [visibleProjects, setVisibleProjects] = useState(3);
+  
   const projects = [
     {
       title: "EzShopping: AI-Powered Shopping Assistant",
@@ -69,7 +78,8 @@ const ProjectsSection: React.FC = () => {
         "Integrated chatbot using NLTK, spaCy, and Transformers for NLP-based interactions"
       ],
       technologies: ["Python", "Poetry", "Docker", "ngrok", "Streamlit", "REST API", "Transformer Models", "Pillow python library", "Ultralytics Yolo v11", "Material for Mkdocs", "MongoDB DB", "CICD pipelines"],
-      link: "#"
+      link: "#",
+      featured: true
     },
     {
       title: "Xperi: Augmented Reality EdTech App",
@@ -89,7 +99,8 @@ const ProjectsSection: React.FC = () => {
         "Enabled secure user flows and modular backend architecture"
       ],
       technologies: ["E-commerce", "Vue.js", "REST APIs", "Authentication", "API Gateway"],
-      link: "#"
+      link: "#",
+      featured: true
     },
     {
       title: "IoT-Based Automatic Plant Watering System",
@@ -114,15 +125,22 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-gray-50">
-      <div className="section-container">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">
-          Showcasing some of my most significant technical projects and their impacts
-        </p>
+    <section id="projects" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234b5563' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"}}></div>
+      </div>
+      
+      <div className="section-container relative z-10">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="section-title mb-2">Featured Projects</h2>
+          <div className="w-24 h-1 bg-portfolio-blue"></div>
+          <p className="section-subtitle mt-6">
+            Showcasing some of my most significant technical projects and their impacts
+          </p>
+        </div>
         
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.slice(0, visibleProjects).map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
@@ -130,9 +148,33 @@ const ProjectsSection: React.FC = () => {
               technologies={project.technologies}
               period={project.period}
               link={project.link}
+              featured={project.featured}
             />
           ))}
         </div>
+        
+        {visibleProjects < projects.length && (
+          <div className="mt-12 text-center">
+            <Button 
+              onClick={() => setVisibleProjects(projects.length)}
+              className="bg-portfolio-blue hover:bg-blue-700 shadow-md hover:shadow-lg transition-all"
+            >
+              View All Projects
+            </Button>
+          </div>
+        )}
+        
+        {visibleProjects === projects.length && visibleProjects > 3 && (
+          <div className="mt-12 text-center">
+            <Button 
+              onClick={() => setVisibleProjects(3)}
+              variant="outline"
+              className="border-portfolio-blue text-portfolio-blue hover:bg-blue-50"
+            >
+              Show Less
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -12,7 +12,33 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    document.title = "Jankiben Parmar | Portfolio";
+    document.title = "Jankiben Parmar | Software Engineer & Educator";
+    
+    // Initialize intersection observer for animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('opacity-0');
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
