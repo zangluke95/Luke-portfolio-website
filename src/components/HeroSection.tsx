@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -31,16 +30,16 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[90vh] sm:min-h-[80vh] flex items-center pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <section id="home" className="relative min-h-[90vh] sm:min-h-[80vh] flex items-center pt-20 md:pt-32 pb-12 md:pb-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 px-4 sm:px-6">
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-blue-300 mix-blend-multiply filter blur-xl animate-blob"></div>
         <div className="absolute top-40 right-1/4 w-80 h-80 rounded-full bg-purple-300 mix-blend-multiply filter blur-xl animation-delay-2000 animate-blob"></div>
         <div className="absolute bottom-20 left-1/3 w-72 h-72 rounded-full bg-indigo-300 mix-blend-multiply filter blur-xl animation-delay-4000 animate-blob"></div>
       </div>
       
-      <div className="section-container relative z-10">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-3/5 md:pr-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+          <div className="w-full md:w-3/5 text-center md:text-left">
             <div className="mb-2 inline-block text-sm font-semibold px-3 py-1 rounded-full bg-blue-100 text-portfolio-blue animate-fade-in">
               Software Engineer & Educator
             </div>
@@ -55,12 +54,12 @@ const HeroSection: React.FC = () => {
               Passionate about building innovative solutions and sharing knowledge.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in animation-delay-700">
-              <Button asChild className="bg-portfolio-blue hover:bg-blue-700 transform transition-all hover:translate-y-[-3px] shadow-lg hover:shadow-blue-200">
+              <Button asChild className="w-full sm:w-auto bg-portfolio-blue hover:bg-blue-700 transform transition-all hover:translate-y-[-3px] shadow-lg hover:shadow-blue-200">
                 <a href="#contact">
                   Contact Me <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" asChild className="border border-portfolio-blue text-portfolio-blue hover:bg-blue-50 transition-all hover:translate-y-[-3px]">
+              <Button variant="outline" asChild className="w-full sm:w-auto border border-portfolio-blue text-portfolio-blue hover:bg-blue-50 transition-all hover:translate-y-[-3px]">
                 <a href="#projects">View Projects</a>
               </Button>
             </div>
@@ -83,14 +82,15 @@ const HeroSection: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="md:w-2/5 mt-10 md:mt-0 animate-fade-in animation-delay-1000">
-            <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 ring-4 ring-blue-100 ring-opacity-50">
-              <div className="w-full h-full bg-gradient-to-br from-portfolio-blue to-portfolio-lightBlue flex items-center justify-center text-white text-6xl font-bold transform transition-all duration-700 hover:scale-110">
-                <img src={profilePic} alt="Jankiben Parmar" className="w-full h-full object-cover" />
+          <div className="w-full md:w-2/5 flex justify-center md:justify-end animate-fade-in animation-delay-1000">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 ring-4 ring-blue-100 ring-opacity-50">
+                <div className="w-full h-full bg-gradient-to-br from-portfolio-blue to-portfolio-lightBlue flex items-center justify-center text-white text-6xl font-bold transform transition-all duration-700 hover:scale-110">
+                  <img src={profilePic} alt="Jankiben Parmar" className="w-full h-full object-cover" />
+                </div>
               </div>
+              <div className="absolute -z-0 w-full h-full bg-blue-50 rounded-full blur-md opacity-70 animate-pulse" style={{ right: '-5%', top: '10%' }}></div>
             </div>
-            {/* Decorative element */}
-            <div className="absolute -z-0 w-72 h-72 md:w-96 md:h-96 bg-blue-50 rounded-full blur-md opacity-70 animate-pulse" style={{ right: '15%', top: '20%' }}></div>
           </div>
         </div>
       </div>
