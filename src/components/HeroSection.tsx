@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import profilePic from '/Janki.jpeg';
 
 const HeroSection: React.FC = () => {
   const nameRef = useRef<HTMLHeadingElement>(null);
@@ -86,7 +87,7 @@ const HeroSection: React.FC = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 ring-4 ring-blue-100 ring-opacity-50">
               {/* Gradient profile image - can be replaced with actual image when available */}
               <div className="w-full h-full bg-gradient-to-br from-portfolio-blue to-portfolio-lightBlue flex items-center justify-center text-white text-6xl font-bold transform transition-all duration-700 hover:scale-110">
-                <img src="/Janki.jpeg" />
+                <img src={profilePic} alt="Jankiben Parmar" />
               </div>
             </div>
             {/* Decorative element */}
