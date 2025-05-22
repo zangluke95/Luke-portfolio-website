@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -8,15 +8,22 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const navLinks = [
@@ -32,7 +39,15 @@ const Navbar: React.FC = () => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = 80; // Height of the fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
       setIsMobileMenuOpen(false);
     }
   };
@@ -44,55 +59,60 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <nav className="flex justify-between items-center">
           <a 
-            href="#" 
-            className="text-xl font-bold text-portfolio-navy"
+            href="#home" 
             onClick={(e) => handleNavClick(e, '#home')}
+            className="text-xl font-bold text-portfolio-navy hover:text-portfolio-blue transition-colors duration-200"
           >
             Jankiben Parmar
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium text-sm lg:text-base"
+                className="nav-link text-sm lg:text-base"
               >
                 {link.name}
               </a>
             ))}
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            <Menu className="h-6 w-6" />
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6 text-portfolio-navy" />
+            ) : (
+              <Menu className="h-6 w-6 text-portfolio-navy" />
+            )}
           </Button>
-        </div>
+        </nav>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-4 animate-fade-in bg-white/95 backdrop-blur-sm rounded-lg p-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium text-lg py-2 px-4 rounded-md hover:bg-blue-50"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        )}
+        <div 
+          className={`nav-menu md:hidden ${isMobileMenuOpen ? 'open' : 'closed'} flex flex-col items-center justify-center gap-6 p-8`}
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-lg font-medium text-portfolio-navy hover:text-portfolio-blue transition-colors duration-200 py-2"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );
