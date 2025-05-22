@@ -8,25 +8,12 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
-  ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -37,31 +24,42 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const navLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <a href="#" className="text-xl font-bold text-portfolio-navy" onClick={(e) => handleNavClick(e, '#')}>
-            Jankiben Parmar
+      <div className="container mx-auto px-4">
+        <nav className="flex items-center justify-between">
+          <a 
+            href="#" 
+            onClick={(e) => handleNavClick(e, '#')}
+            className="text-xl font-bold text-gray-900"
+          >
+            JP
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 {link.name}
               </a>
             ))}
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -70,24 +68,24 @@ const Navbar: React.FC = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu />
+            <Menu className="h-6 w-6" />
           </Button>
-        </div>
+        </nav>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-4 animate-fade-in">
+          <div className="md:hidden mt-4 py-4 bg-white/80 backdrop-blur-md rounded-lg">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium"
+                className="block px-4 py-2 text-gray-600 hover:text-black hover:bg-gray-100 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-          </nav>
+          </div>
         )}
       </div>
     </header>
