@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 🌟 Janki's Portfolio Website
 
-## Project info
+Welcome to my personal portfolio website, originally generated using [Lovable.dev](https://lovable.dev) and later customized to reflect my unique professional and creative identity.
 
-**URL**: https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a
+## 🔗 Project Info
 
-## How can I edit this code?
+- **Live Website**: [https://76jankihere.github.io/Janki-portfolio-website](https://76jankihere.github.io/Janki-portfolio-website)
+- **Lovable Project URL**: [Lovable.dev Project](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a)
 
-There are several ways of editing your application.
+## 🛠 How to Edit This Code
 
-**Use Lovable**
+### Option 1: Use Lovable.dev (No Setup Required)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a) and start prompting.
+Just visit the project link on Lovable and start prompting. All changes will be automatically committed to this GitHub repo.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Option 2: Use Your Preferred IDE (Local Setup)
 
-**Use your preferred IDE**
+If you want to develop locally, follow these steps:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# 1. Clone the repository
+git clone https://github.com/76jankihere/Janki-portfolio-website.git
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# 2. Navigate to the project directory
+cd Janki-portfolio-website
 
-Follow these steps:
+# 3. Install dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the local development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+> 💡 Ensure Node.js & npm are installed. You can use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) to manage them easily.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Option 3: Edit Directly on GitHub
 
-**Use GitHub Codespaces**
+- Navigate to the desired file in this repo.
+- Click the pencil ✏️ icon (Edit).
+- Make changes and commit them directly via GitHub.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Option 4: Use GitHub Codespaces
 
-## What technologies are used for this project?
+- Go to the main repository page.
+- Click the green **Code** button > **Codespaces** tab.
+- Launch a new Codespace.
+- Edit files in-browser and commit changes.
 
-This project is built with:
+## ⚙️ Technologies Used
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This project was built using:
 
-## How can I deploy this project?
+- **Vite**
+- **React** (with TypeScript)
+- **Tailwind CSS**
+- **shadcn/ui** component library
 
-Simply open [Lovable](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a) and click on Share -> Publish.
+## 🚀 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+You can deploy or re-publish this website directly from Lovable:
 
-Yes, you can!
+- Go to your [Lovable Project](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a)
+- Click **Share → Publish**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌐 Custom Domain Setup
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To add a custom domain:
+
+- Go to **Project → Settings → Domains**
+- Click **Connect Domain**
+
+🔗 [Read the official guide](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
