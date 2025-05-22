@@ -33,34 +33,30 @@ const Navbar: React.FC = () => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a 
-            href="#" 
-            className="text-xl font-bold text-portfolio-navy"
-            onClick={(e) => handleNavClick(e, '#home')}
-          >
+          <a href="#" className="text-xl font-bold text-portfolio-navy" onClick={(e) => handleNavClick(e, '#')}>
             Jankiben Parmar
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium text-sm lg:text-base"
+                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium"
               >
                 {link.name}
               </a>
@@ -74,19 +70,19 @@ const Navbar: React.FC = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu className="h-6 w-6" />
+            <Menu />
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-4 animate-fade-in bg-white/95 backdrop-blur-sm rounded-lg p-4">
+          <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-4 animate-fade-in">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium text-lg py-2 px-4 rounded-md hover:bg-blue-50"
+                className="text-portfolio-gray hover:text-portfolio-blue transition-colors font-medium"
               >
                 {link.name}
               </a>
