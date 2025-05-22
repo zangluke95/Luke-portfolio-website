@@ -8,43 +8,60 @@
   :root {
     --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+
     --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
+
     --accent: 221 83% 53%;
     --accent-foreground: 222.2 47.4% 11.2%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 221 83% 53%;
+
     --radius: 0.5rem;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
+
     --accent: 217.2 91.2% 59.8%;
     --accent-foreground: 222.2 47.4% 11.2%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
@@ -57,7 +74,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: 'Poppins', 'Inter', sans-serif;
   }
@@ -74,63 +91,35 @@
   }
 
   .section-title {
-    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-navy mb-4 sm:mb-6 text-center relative;
-    &::after {
-      content: '';
-      @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-portfolio-blue mt-2;
-    }
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-navy mb-4 sm:mb-6 text-center;
   }
 
   .section-subtitle {
-    @apply text-base sm:text-lg text-portfolio-gray mb-8 sm:mb-10 text-center max-w-3xl mx-auto leading-relaxed;
+    @apply text-base sm:text-lg text-portfolio-gray mb-8 sm:mb-10 text-center max-w-3xl mx-auto;
   }
 
   .highlight {
-    @apply text-portfolio-blue font-medium relative inline-block;
-    &::after {
-      content: '';
-      @apply absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-blue/20;
-    }
+    @apply text-portfolio-blue font-medium;
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-md p-6 sm:p-8 transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-portfolio-blue/20;
+    @apply bg-white rounded-lg shadow-md p-4 sm:p-6 transition duration-300 hover:shadow-lg;
   }
 
   .time-period {
-    @apply text-sm font-medium text-portfolio-accent bg-blue-50/80 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5;
-  }
-
-  .nav-link {
-    @apply relative text-gray-700 hover:text-portfolio-blue transition-colors duration-200 px-3 py-2;
-    &::after {
-      content: '';
-      @apply absolute bottom-0 left-0 w-0 h-0.5 bg-portfolio-blue transition-all duration-300;
-    }
-    &:hover::after {
-      @apply w-full;
-    }
-  }
-
-  .button-primary {
-    @apply bg-portfolio-blue text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-portfolio-navy hover:shadow-lg transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 active:translate-y-0;
-  }
-
-  .button-secondary {
-    @apply border-2 border-portfolio-blue text-portfolio-blue px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-portfolio-blue/5 hover:shadow-md transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 active:translate-y-0;
+    @apply text-sm font-medium text-portfolio-accent bg-blue-50 px-2 sm:px-3 py-1 rounded-full;
   }
 }
 
-/* Timeline styles */
 .timeline-container {
   @apply relative pl-6 sm:pl-8 border-l-2 border-portfolio-lightGray;
 }
 
 .timeline-dot {
-  @apply absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full bg-portfolio-accent transform transition-transform duration-300;
+  @apply absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full bg-portfolio-accent;
 }
 
-/* Animations */
+/* Blob animation for background elements */
 .animate-blob {
   animation: blob 7s infinite;
 }
@@ -158,6 +147,7 @@
   }
 }
 
+/* Fade in animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -189,25 +179,37 @@
   animation-delay: 1000ms;
 }
 
-/* Enhanced hover effects */
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom hover effects */
 .hover-grow {
   @apply transition-all duration-300;
-  &:hover {
-    transform: scale(1.02);
-  }
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  @apply w-2;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 /* Mobile optimizations */
@@ -223,34 +225,11 @@
   .timeline-container {
     @apply pl-6;
   }
-  
-  .nav-menu {
-    @apply fixed inset-0 bg-white/95 backdrop-blur-lg transform transition-transform duration-300;
-  }
-  
-  .nav-menu.open {
-    @apply translate-x-0;
-  }
-  
-  .nav-menu.closed {
-    @apply translate-x-full;
-  }
-}
-
-/* Touch device optimizations */
-@media (hover: none) {
-  .hover-grow:hover {
-    transform: none;
-  }
-  
-  * {
-    -webkit-tap-highlight-color: transparent;
-  }
 }
 
 /* Prevent text selection on mobile */
 @media (max-width: 768px) {
-  .no-select {
+  * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
@@ -259,34 +238,5 @@
   input, textarea {
     -webkit-user-select: auto;
     user-select: auto;
-  }
-}
-
-/* Enhanced accessibility */
-@media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    @apply text-black bg-white;
-  }
-  
-  a {
-    text-decoration: none !important;
-  }
-  
-  .card {
-    @apply shadow-none border-none;
   }
 }
