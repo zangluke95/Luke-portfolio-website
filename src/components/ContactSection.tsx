@@ -47,7 +47,7 @@ const ContactSection: React.FC = () => {
                 <div>
                   <h3 className="font-medium text-portfolio-navy">Location</h3>
                   <p className="text-portfolio-gray">
-                    5282 Bellefontaine Rd, Huber Heights, OH 45424, USA
+                    Millburn, NJ 07041, USA
                   </p>
                 </div>
               </CardContent>
@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
               <h3 className="font-medium text-portfolio-navy mb-3">Connect on</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.linkedin.com/in/janki-parmar-b1466b176/" 
+                  href="https://www.linkedin.com/in/luke-zang/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-portfolio-blue text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -67,7 +67,7 @@ const ContactSection: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://github.com/76jankihere" 
+                  href="https://github.com/zangluke95" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-portfolio-blue text-white p-2 rounded-full hover:bg-blue-700 transition-colors"

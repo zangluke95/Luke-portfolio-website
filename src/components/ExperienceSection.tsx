@@ -68,39 +68,42 @@ const ExperienceItem: React.FC<ExperienceProps> = ({
 const ExperienceSection: React.FC = () => {
   const experiences = [
     {
-      title: "Facilities Management Worker",
-      company: "Wright State University",
-      location: "Dayton, United States",
-      period: "Mar '24 — Present",
+      title: "Curiosity & Academic Drive",
+      company: "Millburn High School",
+      location: "Millburn NJ, United States",
+      period: "Sep '22 — Present",
       responsibilities: [
-        "Working part-time in campus facilities management, assisting with maintenance coordination and developing strong time management and teamwork skills."
+        "Rigorous coursework with AP depth and Columbia SHP enrichment, reflecting curiosity, persistence, and high academic standards.",
+        "Applied advanced AI knowledge and courage to tackle real-world challenges, mastering the latest AI agent concepts and staying at the forefront of innovation.",
+        "Creator of multiple YouTube channels—spanning AI education, music therapy, ASMR music, and teen podcasts—using SEO and storytelling to share knowledge and inspire calm creativity worldwide",
       ],
-      skills: ["Facilities Management", "Time Management", "Teamwork", "Maintenance Coordination"]
+      skills: ["Time Management", "Love to learn", "AI", "Computer Science"]
     },
     {
-      title: "Assistant Professor",
-      company: "Charotar University of Science & Technology",
-      location: "Gujarat, India",
-      period: "Jun '22 — Dec '23",
+      title: "Leadership in Music & Sports",
+      Org: "Millnurn High School, NJYS, and All-State Ensembles",
+      location: "New Jersey, USA",
+      period: "Sep '22 — Present",
       responsibilities: [
-        "Delivered industry-relevant courses in Python, Java, Cloud Computing, and RDBMS.",
-        "Led AI/ML student research, contributing to peer-reviewed publications.",
-        "Designed real-world cloud projects using Docker, CI/CD, and AWS.",
-        "Conducted workshops and hands-on coding sessions to boost student engagement."
+        "Clarinetist with eight years of study and NJMEA All-State recognition, performing to inspire collaboration and belonging.",
+        "Ten-year tennis player and team captain, demonstrating persistence, sportsmanship, and coaching leadership.",
+        "Fencing varsity manager ensuring team organization, readiness, and a positive competitive spirit",
+        "Balances arts and athletics with focus, discipline, and a commitment to continual growth."
       ],
-      skills: ["Cloud Computing", "DevOps", "AI Research", "Machine Learning", "AWS", "Teaching", "Mentoring"]
+      skills: ["Music", "Tennis", "Team Management", "All-State", "Coaching", "work with kids", "Leadership"]
     },
     {
-      title: "Assistant Professor",
-      company: "St. Stephen Institute of Business Management & Technology",
-      location: "Gujarat, India",
-      period: "Aug '21 — Mar '22",
+      title: "Service, Mentorship & Community Impact",
+      company: "Zoo, Guardians of the Generations, and Local Tennis Clubs",
+      location: "New Jersey, NJ, USA",
+      period: "Sep '22 — Present",
       responsibilities: [
-        "Taught Data Science, C Programming, and Android Development.",
-        "Mentored students in coding competitions and technical interviews.",
-        "Integrated IoT and Cloud in interdisciplinary projects to enhance practical learning."
+        "400+ volunteer hours across zoo education, youth coaching, and digital literacy programs for seniors.",
+        "Founder of Guardians of the Generations, a nonprofit initiative teaching seniors scam prevention and technology confidence.",
+        "Designs websites for small businesses, community groups, and his own tennis coaching and nonprofit projects to help others grow online.",
+        "Driven by a belief that technology and creativity can make life more connected, compassionate, and accessible for all"
       ],
-      skills: ["Data Science", "C Programming", "Competitive Programming", "IoT", "Cloud Computing", "Career Coaching"]
+      skills: ["volunteering", "Programming", "Competitive Programming", "Creative", "Passionate to learn", "Coaching"]
     },
   ];
 
@@ -115,7 +118,7 @@ const ExperienceSection: React.FC = () => {
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
             <Briefcase className="h-8 w-8 text-portfolio-blue" />
           </div>
-          <h2 className="section-title mb-0">Professional Experience</h2>
+          <h2 className="section-title mb-0">High School Highlights</h2>
         </div>
         <p className="section-subtitle">
           My journey through academic and industry roles, building expertise in teaching, research, and practical application development

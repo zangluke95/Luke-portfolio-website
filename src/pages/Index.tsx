@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    document.title = "Jankiben Parmar | Software Engineer & Educator";
+    document.title = "Luke Zang | who loves exploring how technology can make the world a little smarter—and kinder";
     
     // Initialize intersection observer for animations
     const observerOptions = {

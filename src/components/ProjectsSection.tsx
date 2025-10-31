@@ -115,72 +115,68 @@ const ProjectsSection: React.FC = () => {
   
   const projects = [
     {
-      title: "EzShopping: AI-Powered Shopping Assistant",
-      period: "Jan '25 — May '25",
+      title: "Luke's Tennis coaching Website",
       description: [
-        "Built a shopping assistant app with Streamlit and Python for personalized recommendations",
-        "Designed REST APIs and ETL pipelines, reducing data processing time by 48%",
-        "Integrated chatbot using NLTK, spaCy, and Transformers for NLP-based interactions"
+        "Designed and built a modern, responsive web platform using front-end frameworks and UI/UX best practices",
+        "Integrated real-time scheduling and contact automation for seamless lesson booking and communicatio",
+        "Applied SEO strategies (keyword optimization, metadata, schema markup) to enhance discoverability and attract new students"
       ],
-      technologies: ["Python", "Poetry", "Docker", "ngrok", "Streamlit", "REST API", "Transformer Models", "Pillow python library", "Ultralytics Yolo v11", "Material for Mkdocs", "MongoDB DB", "CICD pipelines"],
-      link: "https://rarnold97.github.io/ezshopping_site/",
+      technologies: ["Python", "Poetry", "Lovable AI Platform", "Next.js", "Supabase", "n8n Automation", "Responsive Web Design", "UI/UX Design", "Image Editing", "HTML5", "TypeScript", "Google Calendar API Integration"],
+      link: "https://smash-tennis.lukez.edu.kg/",
       featured: true,
       icon: "star"
     },
     {
-      title: "Xperi: Augmented Reality EdTech App",
-      period: "Jan '24 — Apr '24",
+      title: "Wheel of Choice App",
       description: [
-        "Developed interactive AR education platform with real-time 3D scene recognition",
-        "Deployed object detection models on TPU, improving runtime by 30%"
+        "🎯 Add and Spin: Enter names, prizes, foods, or tasks — then spin to pick a random winner instantly.",
+        "🌈 Interactive & Fun: Smooth animations and vibrant visuals make every spin exciting.",
+        "📱 Modern & Responsive: Works perfectly on both desktop and mobile devices.",
+        "⚙️ Customizable Options: Tailor your wheel with colors, segments, and sounds to fit any occasion."
       ],
-      technologies: ["AR", "TensorFlow Lite", "Scene Capturing", "AI Object Detection", "Real-time 3D", "TPU"],
-      link: "https://github.com/76jankihere/Distributed-Computing---Xperi",
+      technologies: ["JavaScript", "HTML", "UI/UX", "No Code", "AI developement", "Responsive Design", "Animation"],
+      link: "https://spin-and-grin.pages.dev/",
       icon: "trending-up"
     },
     {
-      title: "Industrial: E-Commerce Platform",
-      period: "Jan '21 — Apr '21",
+      title: "AI solution landing page ",
       description: [
         "Created REST APIs and API Gateway authentication for an e-commerce platform",
         "Enabled secure user flows and modular backend architecture"
       ],
       technologies: ["E-commerce", "Vue.js", "REST APIs", "Authentication", "API Gateway", "JWT", "OAuth2.0", "Microservices"],
-      link: "https://drive.google.com/file/d/1m4jsTjNNUlnjfpo9iaQTPIgQjaMmbYFO/view?usp=sharing",
-      featured: true,
+      link: "https://landingpage-6p3.pages.dev/",
+      featured: true, 
       icon: "code"
     },
     {
-      title: "IoT-Based Automatic Plant Watering System",
-      period: "Mar '19 — Apr '19",
+      title: "ESG Explained Dashboard",
       description: [
         "Built moisture-sensing IoT system with real-time dashboard using MongoDB",
         "Automated irrigation logic cut water usage by 30%"
       ],
       technologies: ["IoT", "Arduino", "Python", "MongoDB", "Data Analytics", "Automation", "Raspberry Pi", "Sensors", "WebSockets"],
-      link: "https://drive.google.com/drive/folders/1AxZGV8P-rkRd7rBByjfUy-RPucBwtmzd?usp=sharing",
+      link: "https://esg-decoder-tool.pages.dev/",
       icon: "trending-up"
     },
     {
-      title: "Cloud-Powered Online Examination System",
-      period: "Mar '18 — Apr '18",
+      title: "Sleep Calculator App",
       description: [
-        "Created a serverless exam platform using S3/Lambda with role-based access control",
-        "Reduced system latency by 20% using event-driven cloud architecture"
+        "🧠 AI-Powered Sleep Analysis: Calculates your optimal bedtime and wake-up time using smart algorithms based on natural sleep cycles.",
+        "🌙 Simple & Elegant Design: Clean, intuitive interface for quick and effortless use."
       ],
       technologies: ["Cloud", "AWS S3", "Lambda", "Automation", "RBAC", "Event-driven architecture", "DynamoDB", "API Gateway", "CloudFront"],
-      link: "https://drive.google.com/drive/folders/1AxZGV8P-rkRd7rBByjfUy-RPucBwtmzd?usp=sharing",
+      link: "https://dreamy-sleep-cycles-visualizer.pages.dev/",
       icon: "award"
     },
     {
-      title: "AI-Enhanced Content Management System",
-      period: "Jun '23 — Aug '23",
+      title: "News Now: Your fast-track to global aware.",
       description: [
-        "Developed a CMS with AI-powered content suggestions and auto-tagging features",
-        "Implemented full-text search with Elasticsearch improving search speed by 75%"
+        "🌐 Live & Wide-Ranging Coverage: Stay ahead with up-to-the-minute reporting spanning politics, technology, business, culture and more",
+        "📱 Sleek, Responsive Interface: Designed for seamless reading across devices, whether on desktop, tablet or mobile."
       ],
-      technologies: ["React", "Node.js", "Elasticsearch", "NLP", "TensorFlow.js", "GraphQL", "PostgreSQL", "Headless CMS"],
-      link: "#",
+      technologies: ["React", "Node.js", "Elasticsearch", "TensorFlow.js", "UI/UX design", "Headless CMS"],
+      link: "https://news.798899.xyz/",
       icon: "code"
     },
     {

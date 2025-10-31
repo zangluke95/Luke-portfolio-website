@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl font-bold mb-4">Jankiben Parmar</h2>
+            <h2 className="text-2xl font-bold mb-4">Luke Zang</h2>
             <p className="text-gray-300 max-w-lg">
-              MS in Computer Engineering student at Wright State University with experience in cloud computing, 
+              Millburn High School Student paasionate in Computer Engineering student at Wright State University with experience in cloud computing, 
               AI/ML, and full-stack development.
             </p>
           </div>
@@ -29,12 +29,12 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Jankiben Parmar. All rights reserved.
+            &copy; {new Date().getFullYear()} Luke Zang. All rights reserved.
           </p>
           
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a 
-              href="https://www.linkedin.com/in/janki-parmar-b1466b176" 
+              href="https://www.linkedin.com/in/luke-zang/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               </svg>
             </a>
             <a 
-              href="https://github.com/76jankihere" 
+              href="https://github.com/zangluke95" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               </svg>
             </a>
             <a 
-              href="mailto:parmar.29@wright.edu" 
+              href="mailto:zangluk95@gmail.com" 
               className="text-gray-400 hover:text-white transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

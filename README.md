@@ -1,11 +1,9 @@
-# 🌟 Janki's Portfolio Website
+# 🌟 Luke's Portfolio Website
 
 Welcome to my personal portfolio website, originally generated using [Lovable.dev](https://lovable.dev) and later customized to reflect my unique professional and creative identity.
 
 ## 🔗 Project Info
 
-- **Live Website**: [https://76jankihere.github.io/Janki-portfolio-website](https://76jankihere.github.io/Janki-portfolio-website)
-- **Lovable Project URL**: [Lovable.dev Project](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a)
 
 ## 🛠 How to Edit This Code
 
@@ -19,10 +17,10 @@ If you want to develop locally, follow these steps:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/76jankihere/Janki-portfolio-website.git
+git clone
 
 # 2. Navigate to the project directory
-cd Janki-portfolio-website
+cd Luke-portfolio-website
 
 # 3. Install dependencies
 npm install
@@ -59,14 +57,3 @@ This project was built using:
 
 You can deploy or re-publish this website directly from Lovable:
 
-- Go to your [Lovable Project](https://lovable.dev/projects/a1087daa-bd74-4b73-a8df-930376f5d41a)
-- Click **Share → Publish**
-
-## 🌐 Custom Domain Setup
-
-To add a custom domain:
-
-- Go to **Project → Settings → Domains**
-- Click **Connect Domain**
-
-🔗 [Read the official guide](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
