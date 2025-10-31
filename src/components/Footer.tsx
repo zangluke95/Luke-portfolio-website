@@ -9,8 +9,7 @@ const Footer: React.FC = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">Luke Zang</h2>
             <p className="text-gray-300 max-w-lg">
-              Millburn High School Student paasionate in Computer Engineering student at Wright State University with experience in cloud computing, 
-              AI/ML, and full-stack development.
+A curious and passionate student at Millburn High School, deeply fascinated by the world of computer engineering. I'm driven by a love for learning and a desire to understand how technology can be used to create, connect, and care for others.
             </p>
           </div>
           
