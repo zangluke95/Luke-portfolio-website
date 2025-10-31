@@ -22,24 +22,14 @@ const ContactSection: React.FC = () => {
                 <Mail className="h-6 w-6 text-portfolio-blue mt-1" />
                 <div>
                   <h3 className="font-medium text-portfolio-navy">Email</h3>
-                  <a href="mailto:parmar.29@wright.edu" className="text-portfolio-gray hover:text-portfolio-blue transition-colors">
-                    parmar.29@wright.edu
+                  <a href="mailto:zangluke95@gmail.com" className="text-portfolio-gray hover:text-portfolio-blue transition-colors">
+                    zangluke95@gmail.com
                   </a>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="border-none shadow-md hover:shadow-lg transition-all">
-              <CardContent className="p-6 flex items-start space-x-4">
-                <Phone className="h-6 w-6 text-portfolio-blue mt-1" />
-                <div>
-                  <h3 className="font-medium text-portfolio-navy">Phone</h3>
-                  <a href="tel:+19372606122" className="text-portfolio-gray hover:text-portfolio-blue transition-colors">
-                    +1 (937) 260-6122
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+
             
             <Card className="border-none shadow-md hover:shadow-lg transition-all">
               <CardContent className="p-6 flex items-start space-x-4">
