@@ -165,7 +165,7 @@ const ProjectsSection: React.FC = () => {
         "🧠 AI-Powered Sleep Analysis: Calculates your optimal bedtime and wake-up time using smart algorithms based on natural sleep cycles.",
         "🌙 Simple & Elegant Design: Clean, intuitive interface for quick and effortless use."
       ],
-      technologies: ["Cloud", "AWS S3", "Lambda", "Automation", "RBAC", "Event-driven architecture", "DynamoDB", "API Gateway", "CloudFront"],
+      technologies: ["lovable", "Vibe Coding", "AI", "Next.js", "HTML", "CloudFlare"],
       link: "https://dreamy-sleep-cycles-visualizer.pages.dev/",
       icon: "award"
     },
@@ -178,17 +178,6 @@ const ProjectsSection: React.FC = () => {
       technologies: ["React", "Node.js", "Elasticsearch", "TensorFlow.js", "UI/UX design", "Headless CMS"],
       link: "https://news.798899.xyz/",
       icon: "code"
-    },
-    {
-      title: "Blockchain Supply Chain Tracker",
-      period: "Oct '22 — Dec '22",
-      description: [
-        "Built a transparent supply chain tracking system using blockchain technology",
-        "Integrated IoT sensors for real-time monitoring and immutable record-keeping"
-      ],
-      technologies: ["Ethereum", "Solidity", "Web3.js", "IoT Integration", "React", "Smart Contracts", "IPFS"],
-      link: "#",
-      icon: "trending-up"
     }
   ];
 

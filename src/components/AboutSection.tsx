@@ -57,9 +57,8 @@ const AboutSection: React.FC = () => {
 
                 <div className="mt-8 p-5 border-l-4 border-portfolio-blue bg-blue-50 rounded">
                   <p className="text-lg italic text-portfolio-navy">
-                    "I'm passionate about sharing my knowledge and continuously learning new technologies to solve complex problems with elegant solutions."
-                  </p>
-                </div>
+                    "Sharing knowledge while continually upskilling in AI to turn complex challenges into clear, reliable systems that help people.
+</p>                </div>
               </div>
             </CardContent>
           </Card>
