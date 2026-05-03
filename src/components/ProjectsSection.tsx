@@ -112,19 +112,33 @@ const ProjectsSection: React.FC = () => {
     
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  
+
   const projects = [
     {
-      title: "Luke's Tennis coaching Website",
+      title: "Luke's Tennis Coaching Website",
       description: [
         "Designed and built a modern, responsive web platform using front-end frameworks and UI/UX best practices",
-        "Integrated real-time scheduling and contact automation for seamless lesson booking and communicatio",
+        "Integrated real-time scheduling and contact automation for seamless lesson booking and communication",
         "Applied SEO strategies (keyword optimization, metadata, schema markup) to enhance discoverability and attract new students"
       ],
-      technologies: ["Python", "Poetry", "Lovable AI Platform", "Next.js", "Supabase", "n8n Automation", "Responsive Web Design", "UI/UX Design", "Image Editing", "HTML5", "TypeScript", "Google Calendar API Integration"],
+      technologies: ["Python", "Poetry", "Lovable AI Platform", "Next.js", "Supabase", "n8n Automation", "Responsive Web Design", "UI/UX Design", "HTML5", "TypeScript", "Google Calendar API Integration"],
+      period: "2025",
       link: "https://smash-tennis.lukez.edu.kg/",
       featured: true,
       icon: "star"
+    },
+    {
+      title: "Compound Interest Calculator",
+      description: [
+        "💰 Built an interactive finance tool that calculates compound interest growth with real-time results",
+        "📈 Visual chart shows investment growth over time with adjustable principal, rate, and compounding frequency",
+        "⚡ Fast, responsive design works seamlessly on desktop and mobile — hosted on a custom domain"
+      ],
+      technologies: ["JavaScript", "HTML", "CSS", "Finance", "Web Tools", "Cloudflare", "Responsive Design"],
+      period: "2026",
+      link: "https://calc.798899.xyz/compound-interest-calculator",
+      featured: true,
+      icon: "trending-up"
     },
     {
       title: "Wheel of Choice App",
@@ -134,19 +148,21 @@ const ProjectsSection: React.FC = () => {
         "📱 Modern & Responsive: Works perfectly on both desktop and mobile devices.",
         "⚙️ Customizable Options: Tailor your wheel with colors, segments, and sounds to fit any occasion."
       ],
-      technologies: ["JavaScript", "HTML", "UI/UX", "No Code", "AI developement", "Responsive Design", "Animation"],
+      technologies: ["JavaScript", "HTML", "UI/UX", "No Code", "AI Development", "Responsive Design", "Animation"],
+      period: "2025",
       link: "https://spin-and-grin.pages.dev/",
       icon: "trending-up"
     },
     {
-      title: "AI solution landing page ",
+      title: "AI Solution Landing Page",
       description: [
         "Created REST APIs and API Gateway authentication for an e-commerce platform",
         "Enabled secure user flows and modular backend architecture"
       ],
       technologies: ["E-commerce", "Vue.js", "REST APIs", "Authentication", "API Gateway", "JWT", "OAuth2.0", "Microservices"],
+      period: "2025",
       link: "https://landingpage-6p3.pages.dev/",
-      featured: true, 
+      featured: true,
       icon: "code"
     },
     {
@@ -156,6 +172,7 @@ const ProjectsSection: React.FC = () => {
         "Automated irrigation logic cut water usage by 30%"
       ],
       technologies: ["IoT", "Arduino", "Python", "MongoDB", "Data Analytics", "Automation", "Raspberry Pi", "Sensors", "WebSockets"],
+      period: "2025",
       link: "https://esg-decoder-tool.pages.dev/",
       icon: "trending-up"
     },
@@ -165,21 +182,24 @@ const ProjectsSection: React.FC = () => {
         "🧠 AI-Powered Sleep Analysis: Calculates your optimal bedtime and wake-up time using smart algorithms based on natural sleep cycles.",
         "🌙 Simple & Elegant Design: Clean, intuitive interface for quick and effortless use."
       ],
-      technologies: ["lovable", "Vibe Coding", "AI", "Next.js", "HTML", "CloudFlare"],
+      technologies: ["Lovable", "Vibe Coding", "AI", "Next.js", "HTML", "Cloudflare"],
+      period: "2025",
       link: "https://dreamy-sleep-cycles-visualizer.pages.dev/",
       icon: "award"
     },
     {
-      title: "News Now: Your fast-track to global aware.",
+      title: "News Now: Your Fast-Track to Global Awareness",
       description: [
         "🌐 Live & Wide-Ranging Coverage: Stay ahead with up-to-the-minute reporting spanning politics, technology, business, culture and more",
         "📱 Sleek, Responsive Interface: Designed for seamless reading across devices, whether on desktop, tablet or mobile."
       ],
-      technologies: ["React", "Node.js", "Elasticsearch", "TensorFlow.js", "UI/UX design", "Headless CMS"],
+      technologies: ["React", "Node.js", "Elasticsearch", "TensorFlow.js", "UI/UX Design", "Headless CMS"],
+      period: "2025",
       link: "https://news.798899.xyz/",
       icon: "code"
     }
   ];
+
 
   const featuredProjects = projects.filter(project => project.featured);
 
