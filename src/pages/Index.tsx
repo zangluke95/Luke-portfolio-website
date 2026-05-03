@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/ProjectsSection';
 import EducationSection from '@/components/EducationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import AIPlaygroundSection from '@/components/AIPlaygroundSection';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -50,6 +51,7 @@ const Index: React.FC = () => {
         <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
+        <AIPlaygroundSection />
         <EducationSection />
         <ContactSection />
       </main>
